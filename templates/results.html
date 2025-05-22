@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Results</title>
+</head>
+<body>
+    <h1>Review Results for "{{ query }}"</h1>
+    <h2>Sentiment Summary</h2>
+    <p>Positive: {{ summary.positive_pct | round(2) }}%</p>
+    <p>Negative: {{ summary.negative_pct | round(2) }}%</p>
+    <p>Neutral: {{ summary.neutral_pct | round(2) }}%</p>
+    <h2>Comments</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <strong>Video:</strong> {{ comment.video_title }}<br>
+                <strong>Comment:</strong> {{ comment.translated_comment }}<br>
+                {% if comment.language != "en" %}
+                    <strong>Original ({{ comment.language }}):</strong> {{ comment.original_comment }}<br>
+                {% endif %}
+                <strong>Sentiment:</strong> {{ comment.sentiment }} (Polarity: {{ comment.polarity | round(2) }})<br>
+                <strong>Published:</strong> {{ comment.published_at }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Search</a>
+</body>
+</html>

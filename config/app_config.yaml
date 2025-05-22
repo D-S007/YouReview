@@ -1,0 +1,6 @@
+scraper:
+  max_videos: 5
+  max_comments_per_video: 10
+  include_keywords: ["review", "experience", "thoughts", "pros and cons"]
+  exclude_keywords: ["unboxing", "first impressions", "hands-on", "reveal"]
+  min_days_old: 30  # Videos at least 30 days old

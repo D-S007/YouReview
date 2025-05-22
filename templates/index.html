@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Scraper</title>
+</head>
+<body>
+    <h1>YouTube Review Scraper</h1>
+    <form method="POST">
+        <input type="text" name="query" placeholder="Enter product name (e.g., iPhone 15)" required>
+        <input type="submit" value="Scrape Reviews">
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
