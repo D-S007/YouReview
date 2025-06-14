@@ -3,8 +3,8 @@ from flask import Flask, request, render_template
 from src.scraper import scrape_youtube_comments
 from src.processor import process_comments
 from src.analyzer import analyze_sentiment
-
-app = Flask(__name__)
+import os
+app = Flask(__name__, template_folder="/home/Davcote/Desktop/DS/Projects/YouReview/templates")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
