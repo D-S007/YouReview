@@ -3,6 +3,15 @@
 ## Overview
 A tool to scrape YouTube comments for a product, process Hinglish/non-English comments, and perform sentiment analysis to gauge user opinions. Built with Python, Flask, and free AI tools, it filters videos for genuine reviews and displays results via a web interface.
 
+### Input 
+![alt text](image.png)
+
+### Sentiment Summary
+![alt text](image-1.png)
+
+### Comments
+![alt text](image-2.png)
+
 ## Features
 - Input product name to scrape comments from relevant YouTube videos.
 - Filter videos by title, description, and upload date to target reviews.
